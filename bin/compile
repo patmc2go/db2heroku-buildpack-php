@@ -24,9 +24,12 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 function download_and_install_ibm_db() {
-  CLI_URL="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/linuxx64_odbc_cli.tar.gz"
+  #CLI_URL="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/linuxx64_odbc_cli.tar.gz"
+  CLI_URL="https://public.dhe.ibm.com/ibmdl/export/pub/software/data/db2/drivers/odbc_cli/linuxx64_odbc_cli_v97fp10.tar.gz"
 
-  echo "Downloading IBM Data Server Driver...."
+  #echo "Downloading IBM Data Server Driver...."
+  echo "Downloading V9.7 of the IBM Data Server Driver...."
+  echo "    >> temporary use of older driver to test SQL DB Premium service"
   curl -LO "$CLI_URL"
 
   # Extracting and Cleaning DS Driver
