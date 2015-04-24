@@ -30,7 +30,8 @@ function download_and_install_ibm_db() {
   #echo "Downloading IBM Data Server Driver...."
   echo "Downloading V9.7 of the IBM Data Server Driver...."
   echo "    >> temporary use of older driver to test SQL DB Premium service"
-  curl -LO "$CLI_URL"
+  #curl -LO "$CLI_URL"
+  curl -LO "$CLI_URL" -o linuxx64_odbc_cli.tar.gz
 
   # Extracting and Cleaning DS Driver
   rm -rf clidriver
